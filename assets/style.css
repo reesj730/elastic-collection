@@ -1,0 +1,170 @@
+
+@import url("https://use.typekit.net/arg6gew.css");
+
+body{
+	width: 1440px;
+	height: 2025px;
+	background: #000000;
+}
+
+.text{
+	position: absolute;
+	width: 1075px;
+	height: 1979px;
+	left: 343px;
+	top: 23px;
+
+	font-family: Bebas Neue;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 140px;
+	line-height: 125px;
+	/* or 89% */
+
+	text-align: justify;
+
+	color: #FFFFFF;
+}
+
+.title{
+	position: absolute;
+	width: 187px;
+	height: 21px;
+	left: 25px;
+	top: 23px;
+
+	font-family: Bebas Neue;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+
+	color: #FFFFFF;
+}
+
+span{
+	color: black;
+	font-size: 130px;
+}
+
+.vandalism{
+	position: absolute;
+	width: 434px;
+	height: 101px;
+	left: 816px;
+	top: 277px;
+/* or 96% */
+}
+
+.art{
+	position: absolute;
+	width: 167px;
+	height: 100px;
+	left: 903px;
+	top: 403px;
+}
+
+.curse{
+	position: absolute;
+	width: 303px;
+	height: 101px;
+	left: 751px;
+	top: 902px;
+}
+
+.blah{
+	position: absolute;
+	width: 186px;
+	height: 101px;
+	left: 575px;
+	top: 1152px;
+}
+
+.blah2{
+	position: absolute;
+	width: 186px;
+	height: 101px;
+	left: 1007px;
+	top: 1152px;
+}
+
+.well_duh{
+	position: absolute;
+	width: 380px;
+	height: 101px;
+	left: 1047px;
+	top: 1277px;
+}
+
+.s{
+	position: absolute;
+	width: 65px;
+	height: 101px;
+	left: 881px;
+	top: 1402px;
+}
+
+.ry{
+	position: absolute;
+	width: 120px;
+	height: 101px;
+	left: 1067px;
+	top: 1402px;
+}
+
+.not{
+	position: absolute;
+	width: 169px;
+	height: 101px;
+	left: 869px;
+	top: 1526px;
+}
+
+.s2{
+	position: absolute;
+	width: 65px;
+	height: 101px;
+	left: 923px;
+	top: 1652px;
+}
+
+.ry2{
+	position: absolute;
+	width: 120px;
+	height: 101px;
+	left: 1108px;
+	top: 1652px;
+}
+
+.free{
+	position: absolute;
+	width: 266px;
+	height: 101px;
+	left: 695px;
+	top: 1777px;
+}
+
+
+/* media queries */
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 640px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 1140px) {
+}
+
+@media screen and (max-width: 1366px) {
+}
+
+
