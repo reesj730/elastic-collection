@@ -1,10 +1,25 @@
 
 @import url("https://use.typekit.net/arg6gew.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
 body{
 	width: 1440px;
 	height: 2025px;
 	background: #000000;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale; /* 2 */
+  -webkit-font-smoothing: antialiased; /* 2 */
+  overflow-x: hidden; /* 3 */
+}
+
+html {
+  -ms-text-size-adjust: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 1 */
+  box-sizing: border-box; /* 2 */
+  scroll-behavior: smooth; /* 3 */
 }
 
 .text{
@@ -42,129 +57,191 @@ body{
 	color: #FFFFFF;
 }
 
+
+/* hover effects */
+a{
+  text-decoration: none;
+}
+
+
+.r-link{
+	display: var(--rLinkDisplay, inline-flex) !important;
+}
+
+.r-link[href]{
+	color: var(--rLinkColor) !important;
+	text-decoration: var(--rLinkTextDecoration, none) !important;
+}
+
+.text-underlined{
+
+    --uiTextUnderlinedLineHeight: var(--textUnderlinedLineHeight, 2px); /* 1 */
+    --uiTextUnderlinedLineGap: var(--textUnderlinedLineGap, .5rem);
+    --uiTextUnderlinedPaddingBottom: calc(var(--uiTextUnderlinedLineHeight) + var(--uiTextUnderlinedLineGap));
+
+    padding-bottom: var(--uiTextUnderlinedPaddingBottom) !important;
+    position: var(--textUnderlinedPosition, relative) !important;
+		z-index: var(--textUnderlinedZindex, 1) !important;
+}
+
+.text-underlined::after{
+    content: "";
+    width: var(--textUnderlinedLineWidht, 100%) !important;
+    height: var(--uiTextUnderlinedLineHeight) !important;
+		background-image: var(--textUnderlinedBackgroundImage, linear-gradient(to top, var(--textUnderlinedLineColor, currentColor) 30%, rgba(0, 0, 0, 0) 45%)) !important;
+
+    position: absolute;
+    left: var(--textUnderlinedLineLeft, 0) !important;
+    bottom: var(--textUnderlinedLineBottom, 0) !important;
+		z-index: var(--textUnderlinedLineZindex, -1) !important;
+}
+
+.links{
+	--textUnderlinedLineHeight: 100%;
+	--textUnderlinedLineGap: 0;
+	--textUnderlinedLineColor: #00C868;
+	
+	padding-left: .75rem;
+	padding-right: .75rem;
+}
+
+.links::after{
+	will-change: width;
+	transition: width .1s ease-out;
+	transform: rotate(-2deg);
+	transform-origin: left bottom;
+}
+
+.links:hover{
+	--textUnderlinedLineWidht: 0;
+}
+
+.links:hover::after{
+	transition-duration: .15s;
+}
+
+.links{
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.links:focus{
+	outline: 2px solid #00C868;
+	outline-offset: .5rem;
+}
+
+
 span{
+	font-family: 'Sedgwick Ave Display', cursive;
+	font-size: 120px;
+	text-transform: uppercase;
 	color: black;
-	font-size: 130px;
 }
 
-.vandalism{
-	position: absolute;
-	width: 434px;
-	height: 101px;
-	left: 816px;
-	top: 277px;
-/* or 96% */
+.libs:hover {
+    animation: text-shadow 1.5s ease-in-out infinite;
+    color:#00B2FF;
 }
 
-.art{
-	position: absolute;
-	width: 167px;
-	height: 100px;
-	left: 903px;
-	top: 403px;
+.link:hover{
+	color:#00C868;
+	-webkit-text-stroke: 1px white;
+    text-shadow:
+       3px 3px 0 white,
+     -1px -1px 0 white,  
+      1px -1px 0 white,
+      -1px 1px 0 white,
+       1px 1px 0 white;
 }
 
-.curse{
-	position: absolute;
-	width: 303px;
-	height: 101px;
-	left: 751px;
-	top: 902px;
-}
+@keyframes text-shadow {
+    0% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
 
-.blah{
-	position: absolute;
-	width: 186px;
-	height: 101px;
-	left: 575px;
-	top: 1152px;
-}
+    20% {  
+        transform: translateY(-1em);
+        text-shadow: 
+            0 0.125em 0 #0c2ffb, 
+            0 0.25em 0 #2cfcfd, 
+            0 -0.125em 0 #fb203b, 
+            0 -0.25em 0 #fefc4b;
+    }
 
-.blah2{
-	position: absolute;
-	width: 186px;
-	height: 101px;
-	left: 1007px;
-	top: 1152px;
-}
+    40% {  
+        transform: translateY(0.5em);
+        text-shadow: 
+            0 -0.0625em 0 #0c2ffb, 
+            0 -0.125em 0 #2cfcfd, 
+            0 0.0625em 0 #fb203b, 
+            0 0.125em 0 #fefc4b;
+    }
+    
+   60% {
+        transform: translateY(-0.25em);
+        text-shadow: 
+            0 0.03125em 0 #0c2ffb, 
+            0 0.0625em 0 #2cfcfd, 
+            0 -0.03125em 0 #fb203b, 
+            0 -0.0625em 0 #fefc4b;
+    }
 
-.well_duh{
-	position: absolute;
-	width: 380px;
-	height: 101px;
-	left: 1047px;
-	top: 1277px;
+    80% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
 }
-
-.s{
-	position: absolute;
-	width: 65px;
-	height: 101px;
-	left: 881px;
-	top: 1402px;
-}
-
-.ry{
-	position: absolute;
-	width: 120px;
-	height: 101px;
-	left: 1067px;
-	top: 1402px;
-}
-
-.not{
-	position: absolute;
-	width: 169px;
-	height: 101px;
-	left: 869px;
-	top: 1526px;
-}
-
-.s2{
-	position: absolute;
-	width: 65px;
-	height: 101px;
-	left: 923px;
-	top: 1652px;
-}
-
-.ry2{
-	position: absolute;
-	width: 120px;
-	height: 101px;
-	left: 1108px;
-	top: 1652px;
-}
-
-.free{
-	position: absolute;
-	width: 266px;
-	height: 101px;
-	left: 695px;
-	top: 1777px;
-}
-
 
 /* media queries */
-@media screen and (max-width: 400px) {
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width:800px) {
+
+/* body text */
+.text{
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 400px;
+	height: 550px;
+	top: 30%;
+	left: 8%;
+	font-size: 70px;
+	line-height: 70px;
+	text-align: left;
+
+	transform: rotate(-360deg) translateY(-100px);
 }
 
-@media screen and (max-width: 640px) {
+body{
+	height: 600px;
 }
 
-@media screen and (max-width: 768px) {
+span{
+	font-size: 70px;
+	line-height: 80px;
+	text-align: left;
 }
 
-@media screen and (max-width: 1024px) {
+.title{
+	left: 170px;
 }
 
-@media screen and (max-width: 1140px) {
-}
 
-@media screen and (max-width: 1366px) {
+}
 }
 
 
