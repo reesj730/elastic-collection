@@ -138,6 +138,11 @@ span{
 	color: black;
 }
 
+#sorry:hover{
+  animation: text-shadow 1.5s ease-in-out infinite;
+  color:#00B2FF;
+}
+
 .libs:hover {
     animation: text-shadow 1.5s ease-in-out infinite;
     color:#00B2FF;
